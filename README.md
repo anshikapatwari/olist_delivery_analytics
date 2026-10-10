@@ -2,6 +2,8 @@
 
 Root-cause analysis of late deliveries and review scores on the Olist Brazilian e-commerce marketplace: a PostgreSQL-style star schema, statistical testing, seller segmentation, and an interactive static report.
 
+Live Demo: https://olist-delivery-analytics.netlify.app
+
 **Key result:** 6.8% of delivered orders arrive late, yet they account for 32% of all 1–2★ reviews. The effect holds after controlling for price, freight and category (odds ratio 13.0). Abnormal carrier transit is the larger contributor to late orders, and 131 high-volume sellers generate 45% of them.
 
 ## Contents
