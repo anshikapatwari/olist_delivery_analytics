@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recommendation Memo · Olist Delivery Analytics</title>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .memo{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+  .memo h1{font-size:1.6rem;max-width:none}.memo h2{font-size:1.1rem;margin:22px 0 6px}
+  .memo p,.memo li{font-size:.95rem;margin:6px 0}.memo ol,.memo ul{padding-left:20px}
+  .meta{color:var(--muted);font-size:.85rem}
+  .bar{display:flex;gap:8px;margin:12px 0}
+  @media print{@page{margin:14mm}.memo{padding:0}.memo h2{margin-top:14px}.bar{display:none}}
+</style>
+</head>
+<body>
+<article class="memo" id="memo"><p>Loading…</p></article>
+<script>
+(async () => {
+  const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
+  const num = (x, d = 0) => Number(x).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+  const brl = (x) => "R$" + num(x);
+  let R;
+  try { R = await (await fetch("data/results.json")).json(); }
+  catch (e) { document.getElementById("memo").textContent = "Could not load data/results.json — serve this folder over HTTP."; return; }
+  const k = R.kpis, mw = R.mann_whitney, L = R.logit, att = R.attribution, rp = R.repeat_purchase, sc = R.scenario, dq = R.data_quality,
+        seg = (n) => R.segmentation.segments.find((s) => s.segment === n), hr = seg("Hidden risks"), ss = seg("Small and shaky"), qp = seg("Quiet performers"),
+        l = R.lane_summary, d = (n) => att.detail.find((x) => x.delay_attribution_detail === n), dr = R.dose_response;
+  document.getElementById("memo").innerHTML = `
+  <div class="bar"><a class="ghost" href="index.html" style="text-decoration:none">← Back to analysis</a><button class="ghost" onclick="print()">Print / save as PDF</button></div>
+  <h1>Where to spend the delivery-experience budget</h1>
+  <p class="meta">To: VP Operations, Olist · From: Anshika Patwari · Data: ${num(k.total_orders)} delivered orders, ${dq.date_min} to ${dq.date_max}</p>
+
+  <h2>Situation</h2>
+  <p>Only ${pct(1 - k.on_time_pct, 1)} of delivered orders arrive after the promised date, but those orders average ${num(mw.distribution.late.mean, 2)} stars against ${num(mw.distribution.on_time.mean, 2)} for on-time orders. The choice is between seller penalties, carrier renegotiation and more honest delivery promises. The data says the first lever to pull is the carrier network, with a seller SLA aimed at a small group of high-volume sellers second.</p>
+
+  <h2>Three findings</h2>
+  <ol>
+    <li><b>The review gap is not a product-mix artefact.</b> Mean score is ${num(mw.mean_diff, 1)} points lower for late orders (rank-biserial effect ${num(mw.rank_biserial, 2)}). Adjusting for price, freight and category leaves the odds ratio for a ≤3★ review at ${num(L.adjusted_price_freight_category.odds_ratio, 1)} (95% CI ${num(L.adjusted_price_freight_category.ci95[0], 1)}–${num(L.adjusted_price_freight_category.ci95[1], 1)}). It scales with severity: ${num(dr[0].mean, 1)}★ on time, ${num(dr[1].mean, 1)}★ at 1–3 days late, ${num(dr[3].mean, 1)}★ at 8+ days.</li>
+    <li><b>Carrier transit is abnormal in most late orders.</b> ${pct(d("carrier_only").pct_orders)} of late orders are carrier-only, ${pct(d("seller_only").pct_orders)} seller-only, ${pct(d("both").pct_orders)} both. Cross-state orders take ${num(l.cross_state_avg, 1)} days in transit versus ${num(l.same_state_avg, 1)} within a state. (Median-ratio heuristic; the split moves with the threshold.)</li>
+    <li><b>A few sellers drive a large share of lateness, yet retention loss is small.</b> ${num(hr.sellers)} high-volume, unreliable sellers (${pct(hr.pct_sellers, 1)} of sellers) account for ${pct(hr.pct_late_orders)} of late orders. A late first order cuts the repeat-purchase rate from ${pct(rp.repeat_rate_ontime, 1)} to ${pct(rp.repeat_rate_late, 1)}, but only ${pct(rp.pct_customers_with_2plus_orders, 1)} of customers ever reorder.</li>
+  </ol>
+
+  <h2>Recommendations, ranked by expected impact</h2>
+  <ol>
+    <li><b>Carrier lanes and honest promises.</b> Renegotiate SLAs on the slowest high-volume lanes and show a longer, truthful window on them. Carrier transit is abnormal in ${pct(att.sensitivity["1.5"].carrier_involved)} of late orders; ${pct(1 - l.same_state_share)} of orders cross a state border.</li>
+    <li><b>Dispatch SLA pilot for the ${num(hr.sellers)} Hidden-risk sellers.</b> Bringing them to the median eligible seller's ${pct(sc.target_pct_late, 1)} late rate would remove about ${num(sc.late_orders_avoided)} late orders (${pct(sc.pct_of_all_late_orders)} of all), roughly ${brl(sc.gmv_per_month)}/month of order value delivered on time. This is a what-if, not a forecast.</li>
+    <li><b>Stricter onboarding for small shaky sellers; promote quiet performers.</b> ${pct(ss.pct_late_rate, 1)} late for ${num(ss.sellers)} small shaky sellers versus ${pct(qp.pct_late_rate, 1)} for ${num(qp.sellers)} quiet performers. Do not justify on repeat revenue: recovering about ${brl(sc.repeat_revenue_recovered)} over the period is small. The argument is review quality.</li>
+  </ol>
+
+  <h2>Validate before acting</h2>
+  <ul>
+    <li>Pilot the seller SLA with the bottom-decile Hidden-risk sellers in a subset of states as an A/B test, measuring their late rate and category review scores.</li>
+    <li>Confirm carrier attribution with lane-level carrier data; our split is a heuristic and cannot separate causes without a natural experiment.</li>
+    <li>Only ${num(R.segmentation.sellers_eligible)} of ${num(R.segmentation.sellers_total)} sellers have ≥30 orders, so the long tail is not scored. Retention evidence is observational and covers a ${pct(rp.pct_customers_with_2plus_orders, 1)} minority of customers.</li>
+  </ul>
+  <p class="meta">All figures are generated from the project's pipeline (see README). Currency: Brazilian real.</p>`;
+})();
+</script>
+</body>
+</html>

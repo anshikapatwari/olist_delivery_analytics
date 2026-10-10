@@ -1,0 +1,15 @@
+# raw data (Kaggle licence: download it yourself) and generated warehouse
+Dataset/
+data/raw/
+warehouse/
+# large generated Power BI exports (regenerate with pipeline/run_analysis.py)
+powerbi/*.csv
+__pycache__/
+*.pyc
+.env
+.venv/
+.DS_Store
+
+# private planning docs (interview prep / resume notes) and local notes
+Olist Delivery-Experience Analytics — Detailed Project Guide.*
+Dataset Link.txt

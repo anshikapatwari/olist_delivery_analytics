@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olist Delivery-Experience Analytics</title>
+<meta name="description" content="Is it the seller, the carrier, or the product? A root-cause analysis of late deliveries and bad reviews on 96k real Olist marketplace orders.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">Olist <span>Delivery Analytics</span></a>
+    <nav aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#root-cause">Root cause</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#retention">Retention</a>
+      <a href="#sellers">Sellers</a>
+      <a href="#voice">Reviews</a>
+      <a href="#actions">Actions</a>
+      <a href="memo.html">Memo</a>
+    </nav>
+    <button id="theme" class="ghost" aria-label="Toggle light/dark theme">Theme</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" id="top">
+    <p class="eyebrow">Marketplace ops &amp; CX analysis · Olist (Brazil), Sep 2016 – Aug 2018</p>
+    <h1 id="hero-title">Late deliveries are a small share of orders and a large share of bad reviews.</h1>
+    <p class="lede" id="hero-lede">Loading results…</p>
+    <div class="kpis" id="kpis" aria-live="polite"></div>
+  </section>
+
+  <noscript><p class="wrap">This site renders its charts from precomputed JSON with JavaScript. Please enable it, or read the README.</p></noscript>
+
+  <section class="wrap" id="overview">
+    <h2>1 · What happened to delivery performance</h2>
+    <p class="sub">On-time share by purchase month, and where customers are happiest. Source: <code>fact_orders</code>, delivered orders only.</p>
+    <div class="grid2">
+      <figure class="card"><figcaption>On-time delivery rate by month</figcaption><div class="chart"><canvas id="c-monthly" role="img" aria-label="Line chart of monthly on-time delivery rate"></canvas></div></figure>
+      <figure class="card"><figcaption>Average review score by customer state (lowest 12)</figcaption><div class="chart"><canvas id="c-state" role="img" aria-label="Bar chart of average review by state"></canvas></div></figure>
+    </div>
+    <p class="insight" id="ins-overview"></p>
+    <figure class="card"><figcaption>Top 10 product categories by late-delivery rate (≥100 orders)</figcaption><div class="chart tall"><canvas id="c-cats" role="img" aria-label="Bar chart of late rate by category"></canvas></div></figure>
+  </section>
+
+  <section class="wrap" id="root-cause">
+    <h2>2 · Seller or carrier? Decomposing the delay</h2>
+    <p class="sub">For every late order, dispatch time is compared with that seller's own median, and transit time with the median for that seller-state → customer-state lane. "Abnormal" = more than <strong id="ratio"></strong>× the baseline.</p>
+    <div class="grid2">
+      <figure class="card"><figcaption>Share of late orders by attributed cause</figcaption><div class="chart"><canvas id="c-attr" role="img" aria-label="Bar chart of attribution shares"></canvas></div></figure>
+      <figure class="card"><figcaption>How sensitive is the split to the 1.5× rule?</figcaption><div id="sens"></div></figure>
+    </div>
+    <p class="insight" id="ins-attr"></p>
+    <figure class="card"><figcaption>Average carrier transit days by seller state (rows) → customer state (columns). Lanes with ≥30 orders only.</figcaption><div id="heat" class="heat-wrap"></div><p class="note" id="heat-note"></p></figure>
+    <details class="caveat"><summary>Method caveat (read before quoting these numbers)</summary>
+      <p>This is a heuristic attribution, not a causal estimate: we never observe what transit would have been without the seller's delay. Baselines need ≥30 orders; thinner sellers/lanes fall back to the seller-state / customer-state median (<span id="fallback"></span>). The "seller-first" rule in the original brief labels an order <em>seller_delay</em> whenever dispatch is abnormal even if transit is also abnormal, which is why the 4-way split is shown.</p>
+    </details>
+  </section>
+
+  <section class="wrap" id="evidence">
+    <h2>3 · Does lateness really cause bad reviews?</h2>
+    <p class="sub">Tests run at <em>order</em> grain (one row per order) so multi-item orders are not counted several times.</p>
+    <div class="grid2">
+      <figure class="card"><figcaption>Review-score distribution: on-time vs late</figcaption><div class="chart"><canvas id="c-dist" role="img" aria-label="Grouped bars of review score distribution"></canvas></div></figure>
+      <figure class="card"><figcaption>Dose-response: mean review by days late (95% CI)</figcaption><div class="chart"><canvas id="c-dose" role="img" aria-label="Bar chart of mean review by lateness bucket"></canvas></div></figure>
+    </div>
+    <div class="grid2">
+      <div class="card" id="mw"></div>
+      <div class="card" id="logit"></div>
+    </div>
+    <p class="insight" id="ins-evidence"></p>
+  </section>
+
+  <section class="wrap" id="retention">
+    <h2>4 · Does a late first order cost a repeat purchase?</h2>
+    <p class="sub" id="ret-sub"></p>
+    <div class="grid2">
+      <figure class="card"><figcaption>Repeat-purchase rate by first-order experience</figcaption><div class="chart"><canvas id="c-repeat" role="img" aria-label="Bar chart of repeat rate"></canvas></div></figure>
+      <div class="card" id="ret-stats"></div>
+    </div>
+    <p class="insight" id="ins-ret"></p>
+  </section>
+
+  <section class="wrap" id="sellers">
+    <h2>5 · Seller segmentation &amp; watchlist</h2>
+    <p class="sub" id="seg-sub"></p>
+    <div class="grid2">
+      <figure class="card"><figcaption>Share of late orders vs share of GMV by segment</figcaption><div class="chart"><canvas id="c-seg" role="img" aria-label="Grouped bars by segment"></canvas></div></figure>
+      <div class="card" id="seg-table"></div>
+    </div>
+    <div class="card">
+      <h3>Seller watchlist <span class="muted" id="wl-count"></span></h3>
+      <p class="note">Sorted by revenue at risk = value of the seller's late orders. Only sellers with ≥30 delivered orders are scored.</p>
+      <div class="filters">
+        <label>Segment <select id="f-seg"></select></label>
+        <label>State <select id="f-state"></select></label>
+        <label>Seller ID contains <input id="f-q" type="search" placeholder="e.g. 4a3c"></label>
+      </div>
+      <div class="table-wrap"><table id="wl">
+        <thead><tr>
+          <th data-k="seller_id">Seller</th><th data-k="segment">Segment</th><th data-k="seller_state">State</th>
+          <th data-k="category">Top category</th><th data-k="n_orders" class="num">Orders</th>
+          <th data-k="pct_late" class="num">% late</th><th data-k="avg_review" class="num">Avg review</th>
+          <th data-k="revenue_at_risk" class="num">Revenue at risk (R$)</th>
+        </tr></thead><tbody></tbody></table></div>
+      <div class="pager"><button id="prev" class="ghost">Previous</button><span id="page-info"></span><button id="next" class="ghost">Next</button></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="voice">
+    <h2>6 · What customers say</h2>
+    <p class="sub" id="voice-sub"></p>
+    <div class="grid2">
+      <figure class="card"><figcaption>Theme mentions in 1–2★ comments</figcaption><div class="chart"><canvas id="c-themes" role="img" aria-label="Bar chart of theme share in negative reviews"></canvas></div></figure>
+      <figure class="card"><figcaption>1–2★ comments mentioning delivery: late vs on-time orders</figcaption><div class="chart"><canvas id="c-deliv" role="img" aria-label="Bar chart"></canvas></div></figure>
+    </div>
+    <p class="insight" id="ins-voice"></p>
+    <div class="card"><h3>Most frequent words (Portuguese, with gloss)</h3><div class="grid2" id="terms"></div></div>
+  </section>
+
+  <section class="wrap" id="actions">
+    <h2>7 · Recommendations</h2>
+    <div id="recs" class="recs"></div>
+    <h3>Limitations</h3>
+    <ul id="limits" class="limits"></ul>
+  </section>
+
+  <section class="wrap" id="repro">
+    <h2>Reproduce</h2>
+<pre><code>pip install duckdb pandas scipy statsmodels scikit-learn
+# put the 9 Kaggle CSVs in Dataset/
+python pipeline/build_warehouse.py   # raw -> star schema -> KPI views (sql/01..03)
+python pipeline/run_analysis.py      # stats, segmentation, text -> site/data/*.json + powerbi/*.csv
+# open site/index.html via any static server, e.g. python -m http.server -d site</code></pre>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Data: <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce">Olist Brazilian E-Commerce</a> (CC BY-NC-SA 4.0). Independent portfolio analysis; not affiliated with Olist. Currency is Brazilian real (R$).</p>
+</footer>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

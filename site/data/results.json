@@ -1,0 +1,1918 @@
+{
+ "data_quality": {
+  "raw_orders": 99441,
+  "raw_order_items": 112650,
+  "delivered_orders": 96478,
+  "analysis_orders": 96470,
+  "missing_delivery_ts": 8,
+  "bad_timestamp_orders": 1373,
+  "price_freight_outlier_orders": 1855,
+  "orders_without_review": 646,
+  "multi_seller_orders": 1275,
+  "status_counts": {
+   "delivered": 96478,
+   "shipped": 1107,
+   "canceled": 625,
+   "unavailable": 609,
+   "invoiced": 314,
+   "processing": 301,
+   "created": 5,
+   "approved": 2
+  },
+  "cancellation_rate": 0.006285133898492574,
+  "date_min": "2016-09-15",
+  "date_max": "2018-08-29"
+ },
+ "kpis": {
+  "total_orders": 96470,
+  "on_time_pct": 0.9322690992018244,
+  "late_orders": 6534,
+  "avg_review": 4.155973451327434,
+  "avg_days_late_when_late": 10.620140801958984,
+  "median_days_to_deliver": 10.0,
+  "gmv": 13221498.11001358
+ },
+ "monthly": [
+  {
+   "month": "2016-10",
+   "n": 265,
+   "on_time": 0.9924528301886792,
+   "avg_review": 4.011450381679389
+  },
+  {
+   "month": "2017-01",
+   "n": 750,
+   "on_time": 0.9706666666666667,
+   "avg_review": 4.198380566801619
+  },
+  {
+   "month": "2017-02",
+   "n": 1653,
+   "on_time": 0.970356926799758,
+   "avg_review": 4.203286670724284
+  },
+  {
+   "month": "2017-03",
+   "n": 2546,
+   "on_time": 0.9544383346425765,
+   "avg_review": 4.18796992481203
+  },
+  {
+   "month": "2017-04",
+   "n": 2303,
+   "on_time": 0.934433347807208,
+   "avg_review": 4.1366812227074234
+  },
+  {
+   "month": "2017-05",
+   "n": 3545,
+   "on_time": 0.970098730606488,
+   "avg_review": 4.2354279215240265
+  },
+  {
+   "month": "2017-06",
+   "n": 3135,
+   "on_time": 0.9696969696969697,
+   "avg_review": 4.222436515589843
+  },
+  {
+   "month": "2017-07",
+   "n": 3872,
+   "on_time": 0.9721074380165289,
+   "avg_review": 4.25897969807392
+  },
+  {
+   "month": "2017-08",
+   "n": 4193,
+   "on_time": 0.9709038874314333,
+   "avg_review": 4.312845138055222
+  },
+  {
+   "month": "2017-09",
+   "n": 4150,
+   "on_time": 0.9561445783132531,
+   "avg_review": 4.267605633802817
+  },
+  {
+   "month": "2017-10",
+   "n": 4478,
+   "on_time": 0.9582402858418937,
+   "avg_review": 4.204678362573099
+  },
+  {
+   "month": "2017-11",
+   "n": 7288,
+   "on_time": 0.8759604829857299,
+   "avg_review": 3.9886693381235316
+  },
+  {
+   "month": "2017-12",
+   "n": 5513,
+   "on_time": 0.9254489388717577,
+   "avg_review": 4.088445339681377
+  },
+  {
+   "month": "2018-01",
+   "n": 7069,
+   "on_time": 0.9429905219974537,
+   "avg_review": 4.109653500641666
+  },
+  {
+   "month": "2018-02",
+   "n": 6555,
+   "on_time": 0.8587337909992372,
+   "avg_review": 3.880897495005379
+  },
+  {
+   "month": "2018-03",
+   "n": 7003,
+   "on_time": 0.8103669855776096,
+   "avg_review": 3.8127518710420265
+  },
+  {
+   "month": "2018-04",
+   "n": 6798,
+   "on_time": 0.9549867608120035,
+   "avg_review": 4.205864928909953
+  },
+  {
+   "month": "2018-05",
+   "n": 6749,
+   "on_time": 0.9343606460216328,
+   "avg_review": 4.236536745016364
+  },
+  {
+   "month": "2018-06",
+   "n": 6096,
+   "on_time": 0.9883530183727034,
+   "avg_review": 4.307312252964427
+  },
+  {
+   "month": "2018-07",
+   "n": 6156,
+   "on_time": 0.9662118258609487,
+   "avg_review": 4.317423994769532
+  },
+  {
+   "month": "2018-08",
+   "n": 6351,
+   "on_time": 0.9381199811053378,
+   "avg_review": 4.310268562401264
+  }
+ ],
+ "review_by_state": [
+  {
+   "customer_state": "AC",
+   "n": 80,
+   "avg_review": 4.0875,
+   "pct_late": 0.0375
+  },
+  {
+   "customer_state": "AL",
+   "n": 397,
+   "avg_review": 3.8477157360406093,
+   "pct_late": 0.2141057934508816
+  },
+  {
+   "customer_state": "AM",
+   "n": 145,
+   "avg_review": 4.243055555555555,
+   "pct_late": 0.027586206896551724
+  },
+  {
+   "customer_state": "AP",
+   "n": 67,
+   "avg_review": 4.242424242424242,
+   "pct_late": 0.029850746268656716
+  },
+  {
+   "customer_state": "BA",
+   "n": 3256,
+   "avg_review": 3.9296995973985753,
+   "pct_late": 0.12162162162162163
+  },
+  {
+   "customer_state": "CE",
+   "n": 1279,
+   "avg_review": 3.9442262372348784,
+   "pct_late": 0.1376075058639562
+  },
+  {
+   "customer_state": "DF",
+   "n": 2080,
+   "avg_review": 4.132850241545894,
+   "pct_late": 0.05673076923076923
+  },
+  {
+   "customer_state": "ES",
+   "n": 1995,
+   "avg_review": 4.078720162519045,
+   "pct_late": 0.10726817042606517
+  },
+  {
+   "customer_state": "GO",
+   "n": 1957,
+   "avg_review": 4.103802672147996,
+   "pct_late": 0.06540623403168115
+  },
+  {
+   "customer_state": "MA",
+   "n": 717,
+   "avg_review": 3.832865168539326,
+   "pct_late": 0.17433751743375175
+  },
+  {
+   "customer_state": "MG",
+   "n": 11354,
+   "avg_review": 4.192556490917147,
+   "pct_late": 0.04571076272679232
+  },
+  {
+   "customer_state": "MS",
+   "n": 701,
+   "avg_review": 4.161659513590844,
+   "pct_late": 0.09700427960057062
+  },
+  {
+   "customer_state": "MT",
+   "n": 886,
+   "avg_review": 4.145620022753128,
+   "pct_late": 0.05981941309255079
+  },
+  {
+   "customer_state": "PA",
+   "n": 946,
+   "avg_review": 3.9142550911039655,
+   "pct_late": 0.11205073995771671
+  },
+  {
+   "customer_state": "PB",
+   "n": 517,
+   "avg_review": 4.076171875,
+   "pct_late": 0.10444874274661509
+  },
+  {
+   "customer_state": "PE",
+   "n": 1593,
+   "avg_review": 4.082963901203294,
+   "pct_late": 0.096045197740113
+  },
+  {
+   "customer_state": "PI",
+   "n": 476,
+   "avg_review": 3.9936305732484074,
+   "pct_late": 0.13865546218487396
+  },
+  {
+   "customer_state": "PR",
+   "n": 4923,
+   "avg_review": 4.239795918367347,
+   "pct_late": 0.04042250660166565
+  },
+  {
+   "customer_state": "RJ",
+   "n": 12350,
+   "avg_review": 3.965359102448612,
+   "pct_late": 0.12105263157894737
+  },
+  {
+   "customer_state": "RN",
+   "n": 474,
+   "avg_review": 4.150743099787686,
+   "pct_late": 0.09282700421940929
+  },
+  {
+   "customer_state": "RO",
+   "n": 243,
+   "avg_review": 4.1652892561983474,
+   "pct_late": 0.02880658436213992
+  },
+  {
+   "customer_state": "RR",
+   "n": 41,
+   "avg_review": 3.902439024390244,
+   "pct_late": 0.12195121951219512
+  },
+  {
+   "customer_state": "RS",
+   "n": 5344,
+   "avg_review": 4.184754036800601,
+   "pct_late": 0.06081586826347305
+  },
+  {
+   "customer_state": "SC",
+   "n": 3546,
+   "avg_review": 4.133560670645069,
+   "pct_late": 0.08206429780033841
+  },
+  {
+   "customer_state": "SE",
+   "n": 335,
+   "avg_review": 3.907185628742515,
+   "pct_late": 0.15223880597014924
+  },
+  {
+   "customer_state": "SP",
+   "n": 40494,
+   "avg_review": 4.2460636765509365,
+   "pct_late": 0.044944930113103174
+  },
+  {
+   "customer_state": "TO",
+   "n": 274,
+   "avg_review": 4.153846153846154,
+   "pct_late": 0.09854014598540146
+  }
+ ],
+ "top_late_categories": [
+  {
+   "product_category_english": "audio",
+   "n": 344,
+   "pct_late": 0.11918604651162791,
+   "avg_review": 3.8475073313782993
+  },
+  {
+   "product_category_english": "home_confort",
+   "n": 370,
+   "pct_late": 0.0945945945945946,
+   "avg_review": 3.907608695652174
+  },
+  {
+   "product_category_english": "fashion_underwear_beach",
+   "n": 117,
+   "pct_late": 0.09401709401709402,
+   "avg_review": 4.008620689655173
+  },
+  {
+   "product_category_english": "books_technical",
+   "n": 255,
+   "pct_late": 0.08235294117647059,
+   "avg_review": 4.425196850393701
+  },
+  {
+   "product_category_english": "baby",
+   "n": 2763,
+   "pct_late": 0.08179515019905899,
+   "avg_review": 4.121853338197738
+  },
+  {
+   "product_category_english": "office_furniture",
+   "n": 1246,
+   "pct_late": 0.08105939004815409,
+   "avg_review": 3.650485436893204
+  },
+  {
+   "product_category_english": "christmas_supplies",
+   "n": 125,
+   "pct_late": 0.08,
+   "avg_review": 4.1138211382113825
+  },
+  {
+   "product_category_english": "electronics",
+   "n": 2507,
+   "pct_late": 0.07658556043079377,
+   "avg_review": 4.128617363344051
+  },
+  {
+   "product_category_english": "furniture_living_room",
+   "n": 409,
+   "pct_late": 0.07579462102689487,
+   "avg_review": 4.094059405940594
+  },
+  {
+   "product_category_english": "musical_instruments",
+   "n": 607,
+   "pct_late": 0.0757825370675453,
+   "avg_review": 4.247920133111481
+  }
+ ],
+ "attribution": {
+  "late_orders_total": 6534,
+  "late_orders_attributed": 6509,
+  "late_orders_excluded_bad_ts": 25,
+  "guide_rule": [
+   {
+    "delay_attribution": "both_or_neither",
+    "orders": 138,
+    "days_late": 326,
+    "pct_orders": 0.02120141342756184,
+    "pct_days_late": 0.004714320834116643
+   },
+   {
+    "delay_attribution": "carrier_delay",
+    "orders": 3378,
+    "days_late": 37919,
+    "pct_orders": 0.5189737286833614,
+    "pct_days_late": 0.5483507107634018
+   },
+   {
+    "delay_attribution": "seller_delay",
+    "orders": 2993,
+    "days_late": 30906,
+    "pct_orders": 0.4598248578890767,
+    "pct_days_late": 0.44693496840248154
+   }
+  ],
+  "detail": [
+   {
+    "delay_attribution_detail": "both",
+    "orders": 2289,
+    "days_late": 26526,
+    "pct_orders": 0.35166692272238437,
+    "pct_days_late": 0.38359532038582234
+   },
+   {
+    "delay_attribution_detail": "carrier_only",
+    "orders": 3378,
+    "days_late": 37919,
+    "pct_orders": 0.5189737286833614,
+    "pct_days_late": 0.5483507107634018
+   },
+   {
+    "delay_attribution_detail": "neither",
+    "orders": 138,
+    "days_late": 326,
+    "pct_orders": 0.02120141342756184,
+    "pct_days_late": 0.004714320834116643
+   },
+   {
+    "delay_attribution_detail": "seller_only",
+    "orders": 704,
+    "days_late": 4380,
+    "pct_orders": 0.10815793516669227,
+    "pct_days_late": 0.0633396480166592
+   }
+  ],
+  "sensitivity": {
+   "1.25": {
+    "seller_involved": 0.5464741127669381,
+    "carrier_involved": 0.9041327392840682,
+    "seller_only": 0.0884928560454755,
+    "carrier_only": 0.4461514825626056,
+    "both": 0.4579812567214626,
+    "neither": 0.007374404670456291
+   },
+   "1.5": {
+    "seller_involved": 0.4598248578890767,
+    "carrier_involved": 0.8706406514057459,
+    "seller_only": 0.10815793516669227,
+    "carrier_only": 0.5189737286833614,
+    "both": 0.35166692272238437,
+    "neither": 0.02120141342756184
+   },
+   "2.0": {
+    "seller_involved": 0.32047933630357966,
+    "carrier_involved": 0.759256414195729,
+    "seller_only": 0.14118912275311107,
+    "carrier_only": 0.5799662006452604,
+    "both": 0.1792902135504686,
+    "neither": 0.09955446305115993
+   },
+   "3.0": {
+    "seller_involved": 0.1949608234751882,
+    "carrier_involved": 0.45137501920417883,
+    "seller_only": 0.15363343063450607,
+    "carrier_only": 0.4100476263634967,
+    "both": 0.04132739284068213,
+    "neither": 0.3949915501613151
+   }
+  },
+  "seller_baseline_threshold": 30,
+  "orders_using_seller_state_fallback": 1080,
+  "orders_using_customer_state_fallback": 180,
+  "seller_involved_by_state": [
+   {
+    "seller_state": "PR",
+    "late": 400,
+    "seller_involved": 0.5375
+   },
+   {
+    "seller_state": "SC",
+    "late": 175,
+    "seller_involved": 0.5085714285714286
+   },
+   {
+    "seller_state": "MG",
+    "late": 364,
+    "seller_involved": 0.46153846153846156
+   },
+   {
+    "seller_state": "SP",
+    "late": 4999,
+    "seller_involved": 0.4408881776355271
+   },
+   {
+    "seller_state": "RJ",
+    "late": 301,
+    "seller_involved": 0.42857142857142855
+   }
+  ]
+ },
+ "lane_heatmap": [
+  {
+   "seller_state": "SP",
+   "customer_state": "PR",
+   "n_orders": 3062,
+   "avg_transit_days": 9.54278249510124,
+   "pct_late": 0.045068582625734814
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "SE",
+   "n_orders": 36,
+   "avg_transit_days": 20.916666666666668,
+   "pct_late": 0.1111111111111111
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "SP",
+   "n_orders": 1283,
+   "avg_transit_days": 9.009353078721746,
+   "pct_late": 0.037412314886983634
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "RJ",
+   "n_orders": 953,
+   "avg_transit_days": 13.837355718782792,
+   "pct_late": 0.12277019937040923
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "RN",
+   "n_orders": 326,
+   "avg_transit_days": 16.99079754601227,
+   "pct_late": 0.10122699386503067
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "BA",
+   "n_orders": 142,
+   "avg_transit_days": 17.802816901408452,
+   "pct_late": 0.14788732394366197
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "RS",
+   "n_orders": 194,
+   "avg_transit_days": 12.639175257731958,
+   "pct_late": 0.08762886597938144
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "DF",
+   "n_orders": 67,
+   "avg_transit_days": 10.462686567164178,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "MG",
+   "n_orders": 423,
+   "avg_transit_days": 11.297872340425531,
+   "pct_late": 0.03546099290780142
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "CE",
+   "n_orders": 54,
+   "avg_transit_days": 21.48148148148148,
+   "pct_late": 0.2037037037037037
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "AC",
+   "n_orders": 55,
+   "avg_transit_days": 17.472727272727273,
+   "pct_late": 0.03636363636363636
+  },
+  {
+   "seller_state": "GO",
+   "customer_state": "GO",
+   "n_orders": 30,
+   "avg_transit_days": 3.2333333333333334,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "PE",
+   "n_orders": 108,
+   "avg_transit_days": 13.527777777777779,
+   "pct_late": 0.07407407407407407
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "PB",
+   "n_orders": 47,
+   "avg_transit_days": 16.170212765957448,
+   "pct_late": 0.1276595744680851
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "RS",
+   "n_orders": 572,
+   "avg_transit_days": 10.174825174825175,
+   "pct_late": 0.04195804195804196
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "RJ",
+   "n_orders": 941,
+   "avg_transit_days": 3.744952178533475,
+   "pct_late": 0.04782146652497343
+  },
+  {
+   "seller_state": "DF",
+   "customer_state": "RJ",
+   "n_orders": 95,
+   "avg_transit_days": 11.210526315789474,
+   "pct_late": 0.07368421052631578
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "BA",
+   "n_orders": 131,
+   "avg_transit_days": 14.312977099236642,
+   "pct_late": 0.11450381679389313
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "PR",
+   "n_orders": 282,
+   "avg_transit_days": 8.354609929078014,
+   "pct_late": 0.024822695035460994
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "CE",
+   "n_orders": 64,
+   "avg_transit_days": 22.421875,
+   "pct_late": 0.140625
+  },
+  {
+   "seller_state": "DF",
+   "customer_state": "BA",
+   "n_orders": 35,
+   "avg_transit_days": 14.114285714285714,
+   "pct_late": 0.05714285714285714
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "RJ",
+   "n_orders": 8064,
+   "avg_transit_days": 12.879092261904763,
+   "pct_late": 0.14248511904761904
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "BA",
+   "n_orders": 2279,
+   "avg_transit_days": 16.474769635805178,
+   "pct_late": 0.12856516015796401
+  },
+  {
+   "seller_state": "MA",
+   "customer_state": "SP",
+   "n_orders": 117,
+   "avg_transit_days": 10.777777777777779,
+   "pct_late": 0.21367521367521367
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "PA",
+   "n_orders": 82,
+   "avg_transit_days": 22.853658536585368,
+   "pct_late": 0.0975609756097561
+  },
+  {
+   "seller_state": "MA",
+   "customer_state": "MG",
+   "n_orders": 31,
+   "avg_transit_days": 13.03225806451613,
+   "pct_late": 0.12903225806451613
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "RJ",
+   "n_orders": 244,
+   "avg_transit_days": 10.319672131147541,
+   "pct_late": 0.06967213114754098
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "TO",
+   "n_orders": 195,
+   "avg_transit_days": 14.312820512820513,
+   "pct_late": 0.1076923076923077
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "PA",
+   "n_orders": 37,
+   "avg_transit_days": 19.18918918918919,
+   "pct_late": 0.05405405405405406
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "MT",
+   "n_orders": 60,
+   "avg_transit_days": 15.25,
+   "pct_late": 0.05
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "AL",
+   "n_orders": 35,
+   "avg_transit_days": 24.0,
+   "pct_late": 0.2857142857142857
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "BA",
+   "n_orders": 41,
+   "avg_transit_days": 17.121951219512194,
+   "pct_late": 0.14634146341463414
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "AP",
+   "n_orders": 49,
+   "avg_transit_days": 24.448979591836736,
+   "pct_late": 0.04081632653061224
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "RS",
+   "n_orders": 3534,
+   "avg_transit_days": 12.975382003395586,
+   "pct_late": 0.06734578381437464
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "CE",
+   "n_orders": 953,
+   "avg_transit_days": 17.977964323189926,
+   "pct_late": 0.13955928646379853
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "AL",
+   "n_orders": 35,
+   "avg_transit_days": 18.62857142857143,
+   "pct_late": 0.17142857142857143
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "MT",
+   "n_orders": 50,
+   "avg_transit_days": 18.14,
+   "pct_late": 0.08
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "SP",
+   "n_orders": 2509,
+   "avg_transit_days": 7.684734954165006,
+   "pct_late": 0.03547229972100439
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "GO",
+   "n_orders": 1396,
+   "avg_transit_days": 12.763610315186247,
+   "pct_late": 0.07449856733524356
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "ES",
+   "n_orders": 1445,
+   "avg_transit_days": 12.418685121107266,
+   "pct_late": 0.12387543252595155
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "MG",
+   "n_orders": 1488,
+   "avg_transit_days": 5.556451612903226,
+   "pct_late": 0.024193548387096774
+  },
+  {
+   "seller_state": "PE",
+   "customer_state": "SP",
+   "n_orders": 103,
+   "avg_transit_days": 9.533980582524272,
+   "pct_late": 0.019417475728155338
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "DF",
+   "n_orders": 181,
+   "avg_transit_days": 8.795580110497237,
+   "pct_late": 0.03314917127071823
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "SC",
+   "n_orders": 113,
+   "avg_transit_days": 11.814159292035399,
+   "pct_late": 0.09734513274336283
+  },
+  {
+   "seller_state": "PE",
+   "customer_state": "MG",
+   "n_orders": 60,
+   "avg_transit_days": 9.366666666666667,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "BA",
+   "customer_state": "BA",
+   "n_orders": 66,
+   "avg_transit_days": 6.46969696969697,
+   "pct_late": 0.07575757575757576
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "AM",
+   "n_orders": 98,
+   "avg_transit_days": 22.897959183673468,
+   "pct_late": 0.030612244897959183
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "MA",
+   "n_orders": 61,
+   "avg_transit_days": 16.37704918032787,
+   "pct_late": 0.14754098360655737
+  },
+  {
+   "seller_state": "BA",
+   "customer_state": "RJ",
+   "n_orders": 83,
+   "avg_transit_days": 10.53012048192771,
+   "pct_late": 0.04819277108433735
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "MS",
+   "n_orders": 55,
+   "avg_transit_days": 10.4,
+   "pct_late": 0.03636363636363636
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "PE",
+   "n_orders": 37,
+   "avg_transit_days": 15.45945945945946,
+   "pct_late": 0.05405405405405406
+  },
+  {
+   "seller_state": "DF",
+   "customer_state": "SP",
+   "n_orders": 301,
+   "avg_transit_days": 7.8305647840531565,
+   "pct_late": 0.023255813953488372
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "RS",
+   "n_orders": 285,
+   "avg_transit_days": 9.796491228070176,
+   "pct_late": 0.04912280701754386
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "SP",
+   "n_orders": 1304,
+   "avg_transit_days": 8.967791411042946,
+   "pct_late": 0.0789877300613497
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "SC",
+   "n_orders": 249,
+   "avg_transit_days": 13.429718875502008,
+   "pct_late": 0.0642570281124498
+  },
+  {
+   "seller_state": "DF",
+   "customer_state": "MG",
+   "n_orders": 102,
+   "avg_transit_days": 6.862745098039215,
+   "pct_late": 0.00980392156862745
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "MG",
+   "n_orders": 543,
+   "avg_transit_days": 9.451197053406998,
+   "pct_late": 0.06077348066298342
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "PR",
+   "n_orders": 704,
+   "avg_transit_days": 4.873579545454546,
+   "pct_late": 0.026988636363636364
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "PI",
+   "n_orders": 326,
+   "avg_transit_days": 16.98159509202454,
+   "pct_late": 0.1656441717791411
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "RR",
+   "n_orders": 33,
+   "avg_transit_days": 27.454545454545453,
+   "pct_late": 0.15151515151515152
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "DF",
+   "n_orders": 96,
+   "avg_transit_days": 11.625,
+   "pct_late": 0.08333333333333333
+  },
+  {
+   "seller_state": "DF",
+   "customer_state": "DF",
+   "n_orders": 48,
+   "avg_transit_days": 1.7708333333333333,
+   "pct_late": 0.041666666666666664
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "SP",
+   "n_orders": 30289,
+   "avg_transit_days": 4.776948727260722,
+   "pct_late": 0.04704678266037175
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "MG",
+   "n_orders": 7340,
+   "avg_transit_days": 9.068528610354223,
+   "pct_late": 0.05354223433242507
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "SC",
+   "n_orders": 116,
+   "avg_transit_days": 6.267241379310345,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "MA",
+   "n_orders": 479,
+   "avg_transit_days": 18.613778705636744,
+   "pct_late": 0.1941544885177453
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "GO",
+   "n_orders": 147,
+   "avg_transit_days": 11.272108843537415,
+   "pct_late": 0.027210884353741496
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "DF",
+   "n_orders": 1359,
+   "avg_transit_days": 10.06990434142752,
+   "pct_late": 0.06548933038999265
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "ES",
+   "n_orders": 166,
+   "avg_transit_days": 12.421686746987952,
+   "pct_late": 0.04819277108433735
+  },
+  {
+   "seller_state": "MA",
+   "customer_state": "RJ",
+   "n_orders": 38,
+   "avg_transit_days": 13.368421052631579,
+   "pct_late": 0.05263157894736842
+  },
+  {
+   "seller_state": "ES",
+   "customer_state": "SP",
+   "n_orders": 99,
+   "avg_transit_days": 9.88888888888889,
+   "pct_late": 0.08080808080808081
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "MS",
+   "n_orders": 473,
+   "avg_transit_days": 12.727272727272727,
+   "pct_late": 0.12473572938689217
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "PR",
+   "n_orders": 133,
+   "avg_transit_days": 6.62406015037594,
+   "pct_late": 0.05263157894736842
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "ES",
+   "n_orders": 108,
+   "avg_transit_days": 14.148148148148149,
+   "pct_late": 0.08333333333333333
+  },
+  {
+   "seller_state": "ES",
+   "customer_state": "MG",
+   "n_orders": 43,
+   "avg_transit_days": 8.465116279069768,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "GO",
+   "customer_state": "RJ",
+   "n_orders": 56,
+   "avg_transit_days": 11.25,
+   "pct_late": 0.05357142857142857
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "GO",
+   "n_orders": 86,
+   "avg_transit_days": 12.220930232558139,
+   "pct_late": 0.046511627906976744
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "PA",
+   "n_orders": 672,
+   "avg_transit_days": 19.885416666666668,
+   "pct_late": 0.12053571428571429
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "RJ",
+   "n_orders": 1126,
+   "avg_transit_days": 11.118117229129663,
+   "pct_late": 0.08348134991119005
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "BA",
+   "n_orders": 359,
+   "avg_transit_days": 15.286908077994429,
+   "pct_late": 0.09749303621169916
+  },
+  {
+   "seller_state": "PE",
+   "customer_state": "RJ",
+   "n_orders": 41,
+   "avg_transit_days": 11.902439024390244,
+   "pct_late": 0.07317073170731707
+  },
+  {
+   "seller_state": "BA",
+   "customer_state": "SP",
+   "n_orders": 136,
+   "avg_transit_days": 8.360294117647058,
+   "pct_late": 0.03676470588235294
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "PE",
+   "n_orders": 85,
+   "avg_transit_days": 16.023529411764706,
+   "pct_late": 0.10588235294117647
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "MS",
+   "n_orders": 31,
+   "avg_transit_days": 10.709677419354838,
+   "pct_late": 0.03225806451612903
+  },
+  {
+   "seller_state": "BA",
+   "customer_state": "MG",
+   "n_orders": 51,
+   "avg_transit_days": 7.352941176470588,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "PB",
+   "n_orders": 38,
+   "avg_transit_days": 18.81578947368421,
+   "pct_late": 0.13157894736842105
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "SC",
+   "n_orders": 249,
+   "avg_transit_days": 5.502008032128514,
+   "pct_late": 0.04417670682730924
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "MT",
+   "n_orders": 640,
+   "avg_transit_days": 14.5671875,
+   "pct_late": 0.0609375
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "RS",
+   "n_orders": 277,
+   "avg_transit_days": 13.96028880866426,
+   "pct_late": 0.04332129963898917
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "AL",
+   "n_orders": 253,
+   "avg_transit_days": 21.66403162055336,
+   "pct_late": 0.23715415019762845
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "PE",
+   "n_orders": 91,
+   "avg_transit_days": 13.692307692307692,
+   "pct_late": 0.0989010989010989
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "CE",
+   "n_orders": 73,
+   "avg_transit_days": 17.232876712328768,
+   "pct_late": 0.1232876712328767
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "PE",
+   "n_orders": 1117,
+   "avg_transit_days": 15.656222023276634,
+   "pct_late": 0.09937332139659803
+  },
+  {
+   "seller_state": "GO",
+   "customer_state": "SP",
+   "n_orders": 125,
+   "avg_transit_days": 8.192,
+   "pct_late": 0.016
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "RS",
+   "n_orders": 285,
+   "avg_transit_days": 3.8771929824561404,
+   "pct_late": 0.028070175438596492
+  },
+  {
+   "seller_state": "ES",
+   "customer_state": "RJ",
+   "n_orders": 59,
+   "avg_transit_days": 10.05084745762712,
+   "pct_late": 0.0847457627118644
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "RO",
+   "n_orders": 168,
+   "avg_transit_days": 16.386904761904763,
+   "pct_late": 0.02976190476190476
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "GO",
+   "n_orders": 53,
+   "avg_transit_days": 15.20754716981132,
+   "pct_late": 0.05660377358490566
+  },
+  {
+   "seller_state": "GO",
+   "customer_state": "MG",
+   "n_orders": 80,
+   "avg_transit_days": 7.9375,
+   "pct_late": 0.0
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "ES",
+   "n_orders": 49,
+   "avg_transit_days": 12.408163265306122,
+   "pct_late": 0.04081632653061224
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "PB",
+   "n_orders": 332,
+   "avg_transit_days": 17.1355421686747,
+   "pct_late": 0.10240963855421686
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "PA",
+   "n_orders": 54,
+   "avg_transit_days": 21.51851851851852,
+   "pct_late": 0.1111111111111111
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "SC",
+   "n_orders": 381,
+   "avg_transit_days": 10.05511811023622,
+   "pct_late": 0.05511811023622047
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "MS",
+   "n_orders": 31,
+   "avg_transit_days": 14.161290322580646,
+   "pct_late": 0.0967741935483871
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "PR",
+   "n_orders": 358,
+   "avg_transit_days": 9.58659217877095,
+   "pct_late": 0.0111731843575419
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "SE",
+   "n_orders": 206,
+   "avg_transit_days": 17.815533980582526,
+   "pct_late": 0.1650485436893204
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "PR",
+   "n_orders": 201,
+   "avg_transit_days": 10.124378109452737,
+   "pct_late": 0.0845771144278607
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "MG",
+   "n_orders": 806,
+   "avg_transit_days": 10.239454094292803,
+   "pct_late": 0.03970223325062035
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "SP",
+   "n_orders": 2886,
+   "avg_transit_days": 7.61988911988912,
+   "pct_late": 0.030838530838530838
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "DF",
+   "n_orders": 145,
+   "avg_transit_days": 10.296551724137931,
+   "pct_late": 0.027586206896551724
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "RJ",
+   "n_orders": 464,
+   "avg_transit_days": 13.193965517241379,
+   "pct_late": 0.09267241379310345
+  },
+  {
+   "seller_state": "SC",
+   "customer_state": "BA",
+   "n_orders": 75,
+   "avg_transit_days": 18.346666666666668,
+   "pct_late": 0.12
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "MS",
+   "n_orders": 62,
+   "avg_transit_days": 12.903225806451612,
+   "pct_late": 0.04838709677419355
+  },
+  {
+   "seller_state": "PR",
+   "customer_state": "MA",
+   "n_orders": 42,
+   "avg_transit_days": 17.857142857142858,
+   "pct_late": 0.16666666666666666
+  },
+  {
+   "seller_state": "BA",
+   "customer_state": "PE",
+   "n_orders": 32,
+   "avg_transit_days": 13.46875,
+   "pct_late": 0.0625
+  },
+  {
+   "seller_state": "SP",
+   "customer_state": "SC",
+   "n_orders": 2291,
+   "avg_transit_days": 12.514622435617634,
+   "pct_late": 0.09690091663029245
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "GO",
+   "n_orders": 107,
+   "avg_transit_days": 12.355140186915888,
+   "pct_late": 0.056074766355140186
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "SP",
+   "n_orders": 652,
+   "avg_transit_days": 6.855828220858895,
+   "pct_late": 0.012269938650306749
+  },
+  {
+   "seller_state": "RJ",
+   "customer_state": "ES",
+   "n_orders": 99,
+   "avg_transit_days": 9.434343434343434,
+   "pct_late": 0.020202020202020204
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "MG",
+   "n_orders": 185,
+   "avg_transit_days": 8.535135135135135,
+   "pct_late": 0.016216216216216217
+  },
+  {
+   "seller_state": "MG",
+   "customer_state": "PI",
+   "n_orders": 32,
+   "avg_transit_days": 13.21875,
+   "pct_late": 0.03125
+  },
+  {
+   "seller_state": "RS",
+   "customer_state": "DF",
+   "n_orders": 47,
+   "avg_transit_days": 9.340425531914894,
+   "pct_late": 0.02127659574468085
+  },
+  {
+   "seller_state": "MT",
+   "customer_state": "SP",
+   "n_orders": 30,
+   "avg_transit_days": 9.033333333333333,
+   "pct_late": 0.03333333333333333
+  }
+ ],
+ "lane_summary": {
+  "lanes_total": 407,
+  "lanes_shown": 123,
+  "slowest": [
+   {
+    "seller_state": "SP",
+    "customer_state": "RR",
+    "n_orders": 33,
+    "avg_transit_days": 27.454545454545453,
+    "pct_late": 0.15151515151515152
+   },
+   {
+    "seller_state": "SP",
+    "customer_state": "AP",
+    "n_orders": 49,
+    "avg_transit_days": 24.448979591836736,
+    "pct_late": 0.04081632653061224
+   },
+   {
+    "seller_state": "PR",
+    "customer_state": "AL",
+    "n_orders": 35,
+    "avg_transit_days": 24.0,
+    "pct_late": 0.2857142857142857
+   },
+   {
+    "seller_state": "SP",
+    "customer_state": "AM",
+    "n_orders": 98,
+    "avg_transit_days": 22.897959183673468,
+    "pct_late": 0.030612244897959183
+   },
+   {
+    "seller_state": "MG",
+    "customer_state": "PA",
+    "n_orders": 82,
+    "avg_transit_days": 22.853658536585368,
+    "pct_late": 0.0975609756097561
+   }
+  ],
+  "same_state_avg": 4.760208639520475,
+  "cross_state_avg": 11.823144670379484,
+  "same_state_share": 0.3597076811443972
+ },
+ "mann_whitney": {
+  "U": 103350384.0,
+  "p_value": 0.0,
+  "n_late": 6381,
+  "n_on_time": 89443,
+  "rank_biserial": 0.6378345739713327,
+  "mean_diff": 2.019660368833051,
+  "mean_diff_ci95": [
+   1.9803775363161344,
+   2.0630451240692578
+  ],
+  "distribution": {
+   "late": {
+    "n": 6381,
+    "mean": 2.2708039492242595,
+    "median": 1.0,
+    "share": {
+     "1": 0.537846732487071,
+     "2": 0.08619338661651779,
+     "3": 0.10876038238520608,
+     "4": 0.10170819620749098,
+     "5": 0.16549130230371414
+    }
+   },
+   "on_time": {
+    "n": 89443,
+    "mean": 4.29046431805731,
+    "median": 5.0,
+    "share": {
+     "1": 0.06617622396386526,
+     "2": 0.026463781402681037,
+     "3": 0.08072180047628098,
+     "4": 0.20399584092662365,
+     "5": 0.6226423532305491
+    }
+   }
+  }
+ },
+ "dose_response": [
+  {
+   "bucket": "On time",
+   "n": 89443,
+   "mean": 4.29046431805731,
+   "ci95": [
+    4.2829334686782525,
+    4.297995167436368
+   ],
+   "pct_1_2_star": 0.09264000536654629
+  },
+  {
+   "bucket": "1-3 days late",
+   "n": 1852,
+   "mean": 3.291036717062635,
+   "ci95": [
+    3.2187711452947445,
+    3.3633022888305257
+   ],
+   "pct_1_2_star": 0.3212742980561555
+  },
+  {
+   "bucket": "4-7 days late",
+   "n": 1748,
+   "mean": 2.104691075514874,
+   "ci95": [
+    2.033862607092654,
+    2.1755195439370945
+   ],
+   "pct_1_2_star": 0.6762013729977117
+  },
+  {
+   "bucket": "8+ days late",
+   "n": 2781,
+   "mean": 1.6957928802588997,
+   "ci95": [
+    1.6500299883366591,
+    1.7415557721811403
+   ],
+   "pct_1_2_star": 0.7928802588996764
+  }
+ ],
+ "dose_response_spearman": {
+  "rho": -0.31448681009069,
+  "p": 0.0
+ },
+ "logit": {
+  "outcome": "review_score <= 3",
+  "unadjusted": {
+   "odds_ratio": 13.077121674213322,
+   "ci95": [
+    12.339132706761445,
+    13.859248891007654
+   ],
+   "p_value": 0.0,
+   "n": 95824,
+   "pseudo_r2": 0.0886823588998693,
+   "converged": true
+  },
+  "adjusted_price_freight_category": {
+   "odds_ratio": 13.000930836575384,
+   "ci95": [
+    12.261467872052911,
+    13.784989234663088
+   ],
+   "p_value": 0.0,
+   "n": 95824,
+   "pseudo_r2": 0.09962750634918172,
+   "converged": true
+  },
+  "adjusted_plus_days_to_deliver": {
+   "odds_ratio": 5.570783545290638,
+   "ci95": [
+    5.174758733818292,
+    5.997116175807137
+   ],
+   "p_value": 0.0,
+   "n": 95824,
+   "pseudo_r2": 0.12020152052097877,
+   "converged": true
+  },
+  "note": "days_to_deliver is partly a mediator of lateness, so the first adjusted model (price, freight, category) is the headline; the second is a stricter robustness check."
+ },
+ "ordinal_logit": {
+  "odds_ratio_lower_scores": 13.881755308244909,
+  "ci95": [
+   13.182366816030326,
+   14.61824975190725
+  ],
+  "n": 95824,
+  "converged": true
+ },
+ "repeat_purchase": {
+  "customers_total": 93358,
+  "customers_with_2plus_orders": 2888,
+  "pct_customers_with_2plus_orders": 0.030403200336877566,
+  "cohort_n": 55873,
+  "followup_rule": "first purchase >= 180 days before last order in data",
+  "late_first_n": 3774,
+  "ontime_first_n": 52099,
+  "repeat_rate_late": 0.01589825119236884,
+  "repeat_rate_ontime": 0.026852722701011536,
+  "diff": -0.010954471508642698,
+  "diff_ci95": [
+   -0.015179704893318536,
+   -0.006729238123966859
+  ],
+  "chi2": 16.605432440521973,
+  "p_value": 4.6019019068133134e-05,
+  "adjusted_odds_ratio": 0.58866328026076,
+  "adjusted_or_ci95": [
+   0.4527135865536889,
+   0.7654386080287486
+  ],
+  "adjusted_p_value": 7.650439713343074e-05,
+  "adjusted_converged": true
+ },
+ "segmentation": {
+  "sellers_total": 2960,
+  "sellers_eligible": 621,
+  "min_orders": 30,
+  "volume_cut_orders": 67.0,
+  "platform_pct_late": 0.06773090079817559,
+  "platform_avg_review": 4.155973451327434,
+  "rules": {
+   "volume": "high if n_orders >= 67 (median of eligible sellers)",
+   "reliability": "high if pct_late <= platform 6.8%",
+   "quality": "high if avg_review >= platform 4.16"
+  },
+  "segments": [
+   {
+    "segment": "Hidden risks",
+    "sellers": 131,
+    "orders": 29457,
+    "late_orders": 2926.0,
+    "gmv": 3833002.75,
+    "revenue_at_risk": 392893.83,
+    "pct_sellers": 0.044256756756756756,
+    "pct_late_orders": 0.4478114478114478,
+    "pct_gmv": 0.28993423424138204,
+    "pct_late_rate": 0.09933122857045863
+   },
+   {
+    "segment": "Insufficient history",
+    "sellers": 2339,
+    "orders": 16087,
+    "late_orders": 1074.0,
+    "gmv": 3046089.32,
+    "revenue_at_risk": 250642.56,
+    "pct_sellers": 0.7902027027027027,
+    "pct_late_orders": 0.16437098255280075,
+    "pct_gmv": 0.23041088985001434,
+    "pct_late_rate": 0.06676198172437371
+   },
+   {
+    "segment": "Quality watch",
+    "sellers": 54,
+    "orders": 10309,
+    "late_orders": 469.0,
+    "gmv": 1026694.41,
+    "revenue_at_risk": 48232.76,
+    "pct_sellers": 0.018243243243243244,
+    "pct_late_orders": 0.07177838996020815,
+    "pct_gmv": 0.07766074719441762,
+    "pct_late_rate": 0.04549422834416529
+   },
+   {
+    "segment": "Quiet performers",
+    "sellers": 192,
+    "orders": 8643,
+    "late_orders": 272.0,
+    "gmv": 1428524.08,
+    "revenue_at_risk": 47791.15,
+    "pct_sellers": 0.06486486486486487,
+    "pct_late_orders": 0.0416284052647689,
+    "pct_gmv": 0.10805576260809487,
+    "pct_late_rate": 0.03147055420571561
+   },
+   {
+    "segment": "Small and shaky",
+    "sellers": 116,
+    "orders": 5186,
+    "late_orders": 631.0,
+    "gmv": 796155.2,
+    "revenue_at_risk": 101361.76,
+    "pct_sellers": 0.03918918918918919,
+    "pct_late_orders": 0.09657177838996021,
+    "pct_gmv": 0.06022240611470846,
+    "pct_late_rate": 0.1216737369841882
+   },
+   {
+    "segment": "Star sellers",
+    "sellers": 128,
+    "orders": 26788,
+    "late_orders": 1162.0,
+    "gmv": 3089783.17,
+    "revenue_at_risk": 145002.28,
+    "pct_sellers": 0.043243243243243246,
+    "pct_late_orders": 0.1778389960208142,
+    "pct_gmv": 0.2337159599913827,
+    "pct_late_rate": 0.04337763177542183
+   }
+  ]
+ },
+ "scenario": {
+  "assumption": "Hidden-risk sellers cut pct_late to the median eligible seller; each avoided late order keeps its order value and moves to the on-time review mean.",
+  "target_pct_late": 0.05555555555555555,
+  "hidden_risk_sellers": 131,
+  "late_orders_avoided": 1289.5,
+  "pct_of_all_late_orders": 0.19735231098867462,
+  "gmv_on_avoided_late_orders": 194574.4469589838,
+  "review_points_recovered_total": 2604.352045610219,
+  "avg_late_order_value": 150.89138965411695,
+  "period_months": 23.453947368421055,
+  "repeat_revenue_recovered": 2131.4602355220977,
+  "repeat_revenue_recovered_ci95": [
+   1309.337786426161,
+   2953.5826846180344
+  ],
+  "gmv_per_month": 8296.021300916
+ },
+ "review_text": {
+  "reviews_total": 98673,
+  "with_comment": 38888,
+  "pct_with_comment": 0.3941098375442117,
+  "negative_comments_1_2_star": 9233,
+  "translation": "None: Portuguese keyword stems applied to ALL comments (no sampling needed).",
+  "theme_share_negative": {
+   "Delivery / shipping": 0.5539911188129535,
+   "Product quality / defect": 0.13365103433336945,
+   "Wrong / incomplete item": 0.14134084262969782,
+   "Packaging": 0.04332286364128669,
+   "Seller / customer service": 0.14155745694790425
+  },
+  "theme_share_positive": {
+   "Delivery / shipping": 0.47548047589993897,
+   "Product quality / defect": 0.08991763270286761,
+   "Wrong / incomplete item": 0.012812690665039659,
+   "Packaging": 0.042175106772422206,
+   "Seller / customer service": 0.043090298962782186
+  },
+  "delivery_share_neg_late": 0.819439388423735,
+  "delivery_share_neg_ontime": 0.44156645081714463,
+  "neg_late_n": 2747,
+  "neg_ontime_n": 6486,
+  "delivery_chi2_p": 1.672970317128983e-244,
+  "top_terms_neg": [
+   {
+    "term": "veio",
+    "count": 1330,
+    "share": 0.14404852160727824
+   },
+   {
+    "term": "ainda",
+    "count": 1093,
+    "share": 0.11837972489981588
+   },
+   {
+    "term": "entregue",
+    "count": 1056,
+    "share": 0.11437236001299686
+   },
+   {
+    "term": "entrega",
+    "count": 1038,
+    "share": 0.11242283114913895
+   },
+   {
+    "term": "chegou",
+    "count": 973,
+    "share": 0.10538286580742987
+   },
+   {
+    "term": "prazo",
+    "count": 696,
+    "share": 0.07538178273583884
+   },
+   {
+    "term": "compra",
+    "count": 634,
+    "share": 0.0686667388714394
+   },
+   {
+    "term": "pedido",
+    "count": 593,
+    "share": 0.06422614534820752
+   },
+   {
+    "term": "agora",
+    "count": 521,
+    "share": 0.05642802989277591
+   },
+   {
+    "term": "apenas",
+    "count": 508,
+    "share": 0.05502003682443409
+   },
+   {
+    "term": "pois",
+    "count": 425,
+    "share": 0.046030542618867104
+   },
+   {
+    "term": "dois",
+    "count": 421,
+    "share": 0.04559731398245424
+   },
+   {
+    "term": "qualidade",
+    "count": 417,
+    "share": 0.045164085346041376
+   },
+   {
+    "term": "nada",
+    "count": 413,
+    "share": 0.04473085670962851
+   },
+   {
+    "term": "site",
+    "count": 403,
+    "share": 0.04364778511859634
+   }
+  ],
+  "top_terms_pos": [
+   {
+    "term": "prazo",
+    "count": 6936,
+    "share": 0.26449054301403296
+   },
+   {
+    "term": "antes",
+    "count": 5224,
+    "share": 0.19920683343502135
+   },
+   {
+    "term": "entrega",
+    "count": 4527,
+    "share": 0.1726281269066504
+   },
+   {
+    "term": "chegou",
+    "count": 3898,
+    "share": 0.1486424649176327
+   },
+   {
+    "term": "recomendo",
+    "count": 3827,
+    "share": 0.14593502135448444
+   },
+   {
+    "term": "qualidade",
+    "count": 2128,
+    "share": 0.0811470408785845
+   },
+   {
+    "term": "entregue",
+    "count": 2119,
+    "share": 0.08080384380719952
+   },
+   {
+    "term": "tudo",
+    "count": 2037,
+    "share": 0.07767693715680293
+   },
+   {
+    "term": "excelente",
+    "count": 1723,
+    "share": 0.06570317266625991
+   },
+   {
+    "term": "\u00f3timo",
+    "count": 1709,
+    "share": 0.06516931055521659
+   },
+   {
+    "term": "super",
+    "count": 1551,
+    "share": 0.05914429530201342
+   },
+   {
+    "term": "gostei",
+    "count": 1434,
+    "share": 0.054682733374008544
+   },
+   {
+    "term": "r\u00e1pida",
+    "count": 1341,
+    "share": 0.05113636363636364
+   },
+   {
+    "term": "dentro",
+    "count": 1170,
+    "share": 0.04461561928004881
+   },
+   {
+    "term": "veio",
+    "count": 1105,
+    "share": 0.04213697376449054
+   }
+  ],
+  "keywords": {
+   "Delivery / shipping": [
+    "entrega",
+    "entreg",
+    "prazo",
+    "atras",
+    "demor",
+    "chegou",
+    "chegar",
+    "correio",
+    "transportadora",
+    "rastre",
+    "ainda n\u00e3o",
+    "n\u00e3o recebi",
+    "nao recebi",
+    "n\u00e3o chegou",
+    "nao chegou",
+    "nunca chegou",
+    "aguardando"
+   ],
+   "Product quality / defect": [
+    "qualidade",
+    "defeito",
+    "quebr",
+    "danific",
+    "estragad",
+    "ruim",
+    "p\u00e9ssim",
+    "pessim",
+    "n\u00e3o funciona",
+    "nao funciona"
+   ],
+   "Wrong / incomplete item": [
+    "errad",
+    "diferente",
+    "trocad",
+    "faltou",
+    "falta",
+    "incomplet",
+    "veio outro",
+    "n\u00e3o corresponde",
+    "nao corresponde"
+   ],
+   "Packaging": [
+    "embalagem",
+    "embalad",
+    "caixa"
+   ],
+   "Seller / customer service": [
+    "vendedor",
+    "atendimento",
+    "contato",
+    "resposta",
+    "responde",
+    "reembolso",
+    "devolu\u00e7\u00e3o",
+    "devolucao",
+    "estorno",
+    "cancel"
+   ]
+  }
+ }
+}
