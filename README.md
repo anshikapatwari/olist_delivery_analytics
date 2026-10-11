@@ -94,7 +94,7 @@ SQL uses the DuckDB dialect. For PostgreSQL, replace `read_csv_auto` with `COPY`
 The site is static (HTML, CSS, JavaScript, vendored Chart.js 4.4.1) with no build step, backend or secrets. On Netlify, import the repository and keep the publish directory `site` (set in `netlify.toml`). Any static host works.
 
 ## Power BI
-`powerbi/` contains the model exports, a theme (`olist_theme.json`) and `BUILD_GUIDE.md` with the relationships, DAX measures and the three-page layout (executive overview, delivery root cause, seller scorecard with drill-through).
+`powerbi/` contains the model exports, a theme (`olist_theme.json`) and `BUILD_GUIDE.md` with the relationships, DAX measures and the two-page layout (executive overview and delivery root cause).
 
 ## Repository layout
 ```
